@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE2FC39822220E5A00BD5F1C /* Base64CodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FC39722220E5900BD5F1C /* Base64CodecTests.swift */; };
 		BE2FC39A22220EDE00BD5F1C /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BE2FC39922220EDE00BD5F1C /* test1.jpeg */; };
+		BE2FC3A222225A1700BD5F1C /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FC3A122225A1700BD5F1C /* DateFormat.swift */; };
 		BEF255E0222105B9007134AA /* EcoDatumCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF255D6222105B9007134AA /* EcoDatumCommon.framework */; };
 		BEF255E5222105B9007134AA /* JSONCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF255E4222105B9007134AA /* JSONCodecTests.swift */; };
 		BEF255E7222105B9007134AA /* EcoDatumCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF255D9222105B9007134AA /* EcoDatumCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEF255F1222105C8007134AA /* JSONCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF255F0222105C7007134AA /* JSONCodec.swift */; };
-		BEF6C6072221D40F00EDF4E8 /* Base64Codec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF6C6062221D40F00EDF4E8 /* Base64Codec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE2FC39722220E5900BD5F1C /* Base64CodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64CodecTests.swift; sourceTree = "<group>"; };
 		BE2FC39922220EDE00BD5F1C /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
+		BE2FC3A122225A1700BD5F1C /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		BEF255D6222105B9007134AA /* EcoDatumCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcoDatumCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF255D9222105B9007134AA /* EcoDatumCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoDatumCommon.h; sourceTree = "<group>"; };
 		BEF255DA222105B9007134AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,7 +35,6 @@
 		BEF255E4222105B9007134AA /* JSONCodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodecTests.swift; sourceTree = "<group>"; };
 		BEF255E6222105B9007134AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF255F0222105C7007134AA /* JSONCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodec.swift; sourceTree = "<group>"; };
-		BEF6C6062221D40F00EDF4E8 /* Base64Codec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Codec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +80,7 @@
 				BEF255F0222105C7007134AA /* JSONCodec.swift */,
 				BEF255D9222105B9007134AA /* EcoDatumCommon.h */,
 				BEF255DA222105B9007134AA /* Info.plist */,
-				BEF6C6062221D40F00EDF4E8 /* Base64Codec.swift */,
+				BE2FC3A122225A1700BD5F1C /* DateFormat.swift */,
 			);
 			path = EcoDatumCommon;
 			sourceTree = "<group>";
@@ -93,7 +91,6 @@
 				BE2FC39922220EDE00BD5F1C /* test1.jpeg */,
 				BEF255E4222105B9007134AA /* JSONCodecTests.swift */,
 				BEF255E6222105B9007134AA /* Info.plist */,
-				BE2FC39722220E5900BD5F1C /* Base64CodecTests.swift */,
 			);
 			path = EcoDatumCommonTests;
 			sourceTree = "<group>";
@@ -208,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF255F1222105C8007134AA /* JSONCodec.swift in Sources */,
-				BEF6C6072221D40F00EDF4E8 /* Base64Codec.swift in Sources */,
+				BE2FC3A222225A1700BD5F1C /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF255E5222105B9007134AA /* JSONCodecTests.swift in Sources */,
-				BE2FC39822220E5A00BD5F1C /* Base64CodecTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
