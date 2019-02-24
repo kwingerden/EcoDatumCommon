@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Formatter {
+public extension Formatter {
     
     static let mediumDateStyleFormatter: DateFormatter =  {
         let formatter = DateFormatter()
@@ -19,7 +19,7 @@ extension Formatter {
     
 }
 
-extension Date {
+public extension Date {
     
     func mediumFormatString() -> String {
         return Formatter.mediumDateStyleFormatter.string(from: self)
@@ -31,7 +31,7 @@ extension Date {
     
 }
 
-extension String {
+public extension String {
     
     func iso8601Date() -> Date? {
         return ISO8601DateFormatter().date(from: self)
