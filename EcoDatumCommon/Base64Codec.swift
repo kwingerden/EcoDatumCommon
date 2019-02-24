@@ -18,14 +18,14 @@ public extension String {
     }
     
     public func base64Decode() -> Data? {
-        return Data(base64Encoded: self, options: .ignoreUnknownCharacters)
+        return Data(base64Encoded: self)
     }
     
 }
 
-extension NSAttributedString {
+public extension NSAttributedString {
     
-    static func base64Decode(_ base64Encoded: Base64Encoded) throws -> NSAttributedString {
+    public static func base64Decode(_ base64Encoded: Base64Encoded) throws -> NSAttributedString {
         let decoded = String(data: base64Encoded.base64Decode()!, encoding: .utf8)!
         let data = decoded.data(using: .utf8)!
         return try NSAttributedString(
@@ -37,7 +37,7 @@ extension NSAttributedString {
             documentAttributes: nil)
     }
     
-    func base64Encode() throws -> Base64Encoded? {
+    public func base64Encode() throws -> Base64Encoded? {
         let documentAttributes: [NSAttributedString.DocumentAttributeKey: Any] = [
             .documentType : NSAttributedString.DocumentType.html
         ]
@@ -49,20 +49,20 @@ extension NSAttributedString {
     
 }
 
-extension UIImage {
-    
-    func base64Encode() -> Base64Encoded? {
-        if let jpeg = defaultJpegData() {
-            return jpeg.base64EncodedString()
+public extension UIImage {
+
+    public func base64Encode() -> Base64Encoded? {
+        if let data = pngData() {
+            return data.base64EncodedString()
         }
         return nil
     }
     
-    static func base64Decode(_ jpeg: Base64Encoded) -> UIImage? {
+    public static func base64Decode(_ jpeg: Base64Encoded) -> UIImage? {
         if let data = jpeg.base64Decode() {
             return UIImage(data: data)
         }
         return nil
     }
-    
+
 }
