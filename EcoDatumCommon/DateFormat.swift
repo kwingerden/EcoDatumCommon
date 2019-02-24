@@ -21,12 +21,20 @@ extension Formatter {
 
 extension Date {
     
-    func mediumFormattedDateString() -> String {
+    func mediumFormatString() -> String {
         return Formatter.mediumDateStyleFormatter.string(from: self)
     }
     
-    func iso8601FormattedDateString() -> String {
+    func iso8601String() -> String {
         return ISO8601DateFormatter().string(from: self)
+    }
+    
+}
+
+extension String {
+    
+    func iso8601Date() -> Date? {
+        return ISO8601DateFormatter().date(from: self)
     }
     
 }

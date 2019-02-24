@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE2FC39A22220EDE00BD5F1C /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BE2FC39922220EDE00BD5F1C /* test1.jpeg */; };
 		BE2FC3A222225A1700BD5F1C /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FC3A122225A1700BD5F1C /* DateFormat.swift */; };
+		BE2FC3A422225BC500BD5F1C /* DateFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FC3A322225BC500BD5F1C /* DateFormatTests.swift */; };
 		BEF255E0222105B9007134AA /* EcoDatumCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF255D6222105B9007134AA /* EcoDatumCommon.framework */; };
 		BEF255E5222105B9007134AA /* JSONCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF255E4222105B9007134AA /* JSONCodecTests.swift */; };
 		BEF255E7222105B9007134AA /* EcoDatumCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF255D9222105B9007134AA /* EcoDatumCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		BE2FC39922220EDE00BD5F1C /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
 		BE2FC3A122225A1700BD5F1C /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		BE2FC3A322225BC500BD5F1C /* DateFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatTests.swift; sourceTree = "<group>"; };
 		BEF255D6222105B9007134AA /* EcoDatumCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcoDatumCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF255D9222105B9007134AA /* EcoDatumCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoDatumCommon.h; sourceTree = "<group>"; };
 		BEF255DA222105B9007134AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				BE2FC39922220EDE00BD5F1C /* test1.jpeg */,
 				BEF255E4222105B9007134AA /* JSONCodecTests.swift */,
 				BEF255E6222105B9007134AA /* Info.plist */,
+				BE2FC3A322225BC500BD5F1C /* DateFormatTests.swift */,
 			);
 			path = EcoDatumCommonTests;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2FC3A422225BC500BD5F1C /* DateFormatTests.swift in Sources */,
 				BEF255E5222105B9007134AA /* JSONCodecTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
