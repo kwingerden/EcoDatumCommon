@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias Base64Encoded = String
+public typealias Base64Encoded = String
 
-extension String {
+public extension String {
     
     func base64Encode() -> Base64Encoded? {
         return data(using: .utf8)?.base64EncodedString()
@@ -32,7 +32,7 @@ extension String {
     
 }
 
-extension UIImage {
+public extension UIImage {
     
     func base64EncodedPNG() -> Base64Encoded? {
         return pngData()?.base64EncodedString()
