@@ -7,9 +7,13 @@
 //
 
 import XCTest
+import SwiftyBeaver
 @testable import EcoDatumCommon
 
 class JSONCodecTests: XCTestCase {
+    
+    let log = SwiftyBeaver.self
+    let consoleDestination = ConsoleDestination()
     
     struct Embedded: Codable {
         let attr1: String
@@ -27,6 +31,9 @@ class JSONCodecTests: XCTestCase {
     }
     
     override func setUp() {
+        if !log.destinations.contains(consoleDestination) {
+            log.addDestination(consoleDestination)
+        }
     }
     
     override func tearDown() {
@@ -36,8 +43,17 @@ class JSONCodecTests: XCTestCase {
         let embedded = Embedded(attr1: "value1", attr2: 34)
         let test1 = Test(attr1: embedded, attr2: 11.33)
         
-        let json = try toJSON(test1)
-        XCTAssert(json == "{\"attr1\":{\"attr1\":\"value1\",\"attr2\":34},\"attr2\":11.33}")
+        let json = try toJSON(test1, .prettyPrinted)
+        log.debug("JSON:\n \(json)")
+        XCTAssert(json == """
+            {
+              "attr1" : {
+                "attr1" : "value1",
+                "attr2" : 34
+              },
+              "attr2" : 11.33
+            }
+            """)
         
         let test2 = try fromJSON(Test.self, json)
         XCTAssert(test1 == test2)

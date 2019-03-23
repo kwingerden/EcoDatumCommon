@@ -12,6 +12,8 @@
 		BE2FC39A22220EDE00BD5F1C /* test1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BE2FC39922220EDE00BD5F1C /* test1.jpeg */; };
 		BE2FC3A222225A1700BD5F1C /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FC3A122225A1700BD5F1C /* DateFormat.swift */; };
 		BE2FC3A422225BC500BD5F1C /* DateFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2FC3A322225BC500BD5F1C /* DateFormatTests.swift */; };
+		BE3F163D2246CBC900694511 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3F16352246C4B000694511 /* SwiftyBeaver.framework */; };
+		BE3F16432246D24800694511 /* SwiftyBeaver.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE3F16352246C4B000694511 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEF255E0222105B9007134AA /* EcoDatumCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF255D6222105B9007134AA /* EcoDatumCommon.framework */; };
 		BEF255E5222105B9007134AA /* JSONCodecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF255E4222105B9007134AA /* JSONCodecTests.swift */; };
 		BEF255E7222105B9007134AA /* EcoDatumCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF255D9222105B9007134AA /* EcoDatumCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,12 +30,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BE3F16422246D23F00694511 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE3F16432246D24800694511 /* SwiftyBeaver.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BE27A59D22247457000811DF /* Base64Codec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64Codec.swift; sourceTree = "<group>"; };
 		BE27A59F22247477000811DF /* Base64CodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64CodecTests.swift; sourceTree = "<group>"; };
 		BE2FC39922220EDE00BD5F1C /* test1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test1.jpeg; sourceTree = "<group>"; };
 		BE2FC3A122225A1700BD5F1C /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		BE2FC3A322225BC500BD5F1C /* DateFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatTests.swift; sourceTree = "<group>"; };
+		BE3F16352246C4B000694511 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		BEF255D6222105B9007134AA /* EcoDatumCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcoDatumCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF255D9222105B9007134AA /* EcoDatumCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoDatumCommon.h; sourceTree = "<group>"; };
 		BEF255DA222105B9007134AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3F163D2246CBC900694511 /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE3F16342246C4B000694511 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE3F16352246C4B000694511 /* SwiftyBeaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BEF255CC222105B9007134AA = {
 			isa = PBXGroup;
 			children = (
 				BEF255D8222105B9007134AA /* EcoDatumCommon */,
 				BEF255E3222105B9007134AA /* EcoDatumCommonTests */,
 				BEF255D7222105B9007134AA /* Products */,
+				BE3F16342246C4B000694511 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +169,7 @@
 				BEF255DB222105B9007134AA /* Sources */,
 				BEF255DC222105B9007134AA /* Frameworks */,
 				BEF255DD222105B9007134AA /* Resources */,
+				BE3F16422246D23F00694511 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -372,6 +399,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EcoDatumCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,6 +428,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EcoDatumCommon/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,6 +453,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9424XMB56D;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = EcoDatumCommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,6 +473,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9424XMB56D;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = EcoDatumCommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
