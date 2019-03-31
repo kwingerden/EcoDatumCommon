@@ -38,7 +38,7 @@ public extension UIImage {
         return pngData()?.base64EncodedString()
     }
     
-    func base64EncodedJPEG(compressionQuality: CGFloat) -> Base64Encoded? {
+    func base64EncodedJPEG(compressionQuality: CGFloat = 1.0) -> Base64Encoded? {
         return jpegData(compressionQuality: compressionQuality)?.base64EncodedString()
     }
     
